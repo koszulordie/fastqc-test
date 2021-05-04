@@ -1,0 +1,11 @@
+FROM centos:7
+
+MAINTAINER Ferran Muiños <ferran.muinos@mail.com>
+
+ADD random_numbers.bash .
+
+RUN chmod +x random_numbers.bash
+
+ENTRYPOINT ["/usr/bin/bash", "random_numbers.bash"]
+
+CMD ["2"]
